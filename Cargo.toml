@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/bug_bounty_backend"
+]
+resolver = "2"
