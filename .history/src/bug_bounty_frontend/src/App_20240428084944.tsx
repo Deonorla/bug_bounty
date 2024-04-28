@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { bug_bounty_backend } from "../../declarations/bug_bounty_backend";
 import React from "react";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <main>
-      <p className=" font-black text-[3rem]">Deon</p>
+      <p className="text-blue">Deon</p>
     </main>
   );
 }

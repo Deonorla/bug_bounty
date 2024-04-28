@@ -6,7 +6,7 @@ function App() {
 
   return (
     <main>
-      <p className=" font-black text-[3rem]">Deon</p>
+      <p className="text-blue font-black text-[3rem]">Deon</p>
     </main>
   );
 }
