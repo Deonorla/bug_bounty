@@ -130,7 +130,7 @@ export default {
           "@apply font-code text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-code text-xs font-bold  tracking-wider": {},
+          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
         },
       });
       addUtilities({

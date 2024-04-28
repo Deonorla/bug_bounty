@@ -18,7 +18,7 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
-          7: "#9F9FA8",
+          7: "9F9FA8",
         },
         stroke: {
           1: "#26242C",
@@ -130,7 +130,7 @@ export default {
           "@apply font-code text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-code text-xs font-bold  tracking-wider": {},
+          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
         },
       });
       addUtilities({
