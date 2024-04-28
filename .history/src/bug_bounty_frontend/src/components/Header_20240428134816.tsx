@@ -4,19 +4,12 @@ import { useLocation } from "react-router-dom";
 import Button from "./utils/Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState<boolean>(false);
   const toggleNavigation = () => {
-    if (openNavigation) {
-      setOpenNavigation(false);
-      enablePageScroll();
-    } else {
-      setOpenNavigation(true);
-      disablePageScroll();
-    }
+    openNavigation ? setOpenNavigation(false) : setOpenNavigation(true);
   };
 
   const handleClick = () => {
@@ -24,7 +17,7 @@ const Header = () => {
   };
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 ${
+      className={`fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }  `}
     >
@@ -53,7 +46,6 @@ const Header = () => {
                 } lg:leading-5 `}
                 key={item.id}
                 href={item.url}
-                onClick={() => handleClick()}
               >
                 {item.title}
               </a>

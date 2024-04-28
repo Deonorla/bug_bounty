@@ -4,19 +4,12 @@ import { useLocation } from "react-router-dom";
 import Button from "./utils/Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState<boolean>(false);
   const toggleNavigation = () => {
-    if (openNavigation) {
-      setOpenNavigation(false);
-      enablePageScroll();
-    } else {
-      setOpenNavigation(true);
-      disablePageScroll();
-    }
+    openNavigation ? setOpenNavigation(false) : setOpenNavigation(true);
   };
 
   const handleClick = () => {
