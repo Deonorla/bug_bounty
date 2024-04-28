@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "bug_bounty_backend": {
+      "candid": "src/bug_bounty_backend/bug_bounty_backend.did",
+      "package": "bug_bounty_backend",
+      "type": "rust"
+    },
+    "bug_bounty_frontend": {
+      "dependencies": [
+        "bug_bounty_backend"
+      ],
+      "source": [
+        "src/bug_bounty_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "bug_bounty_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
