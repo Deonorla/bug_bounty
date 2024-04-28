@@ -12,9 +12,11 @@ interface Props {
 
 const Button = ({ className, href, onClick, children, px, white }: Props) => {
   const classes = ` button relative inline-flex items-center 
-    justify-center font-bold h-11 transition-colors  ${px || "px-7"}  ${
-    white ? ` text-black ` : `hover:text-n-1 text-color-7`
-  } ${className || ""}`;
+    justify-center h-11 transition-colors text-color-7 ${
+      px || "px-7"
+    } hover:text-n-1 ${white && `tracking-normal hover:text-black `} ${
+    className || ""
+  }`;
 
   const spanClasses = "relative z-10";
   const renderButton = () => (
