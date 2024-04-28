@@ -1,8 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import Section from "./Section";
 import Button from "../utils/Button";
+import { Canvas, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
+import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
+
+const BugModel = (props: any) => {
+  const { scene, animations } = useGLTF(`/robo_beetle.glb`);
+  const mixer = useRef<THREE.AnimationMixer | undefined>(undefined);
+
+  if (animations && animations.length && !mixer.current) {
+    mixer.current = new THREE.AnimationMixer(scene);
+    animations.forEach((clip) => {
+      mixer.current!.clipAction(clip).play();
+    });
+  }
+
+  useFrame((state, delta) => {
+    if (mixer.current) {
+      mixer.current.update(delta);
+    }
+  });
+  return (
+    <>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[0, 10, 0]} intensity={1} />
+      <primitive object={scene} dispose={null} {...props} />;
+    </>
+  );
+};
 
 const Hero = () => {
+  const width = window.innerWidth >= 1200 ? "100%" : "25rem";
+  const height = window.innerHeight >= 1200 ? "60rem" : "30rem";
   return (
     <Section
       className="pt-12rem -mt-[5.25]"
@@ -28,7 +58,31 @@ const Hero = () => {
             </Button>
           </h1>
         </div>
-        <div className="relative max-w-[23rem mx-auto md:max-w-5xl xl:mb-24]"></div>
+        {/*  BUG MODEL  */}
+        <div className="relative max-w-[23rem mx-auto md:max-w-5xl xl:mb-24]">
+          <div className="relative top-[4rem]  flex justify-center items-center">
+            <Canvas
+              dpr={[1, 2]}
+              shadows
+              camera={{ fov: 45 }}
+              style={{
+                width: `${width}`,
+                height: `${height}`,
+                position: "absolute",
+              }}
+            >
+              <PresentationControls
+                speed={1.5}
+                zoom={0.5}
+                polar={[-0.1, Math.PI / 4]}
+              >
+                <Stage environment={null}>
+                  <BugModel scale={0.7} />
+                </Stage>
+              </PresentationControls>
+            </Canvas>
+          </div>
+        </div>
       </div>
     </Section>
   );
