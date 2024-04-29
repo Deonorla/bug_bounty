@@ -26,7 +26,7 @@ export default {
         linear: {
           1: "#FF5E4A",
           2: "#F9BF2D",
-          3: "#0E0C15",
+          3: "#131315",
         },
         n: {
           1: "#FFFFFF",

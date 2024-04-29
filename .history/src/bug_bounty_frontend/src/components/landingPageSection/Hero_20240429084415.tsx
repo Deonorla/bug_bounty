@@ -7,7 +7,6 @@ import { heroIcons } from "../../constants";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 import { BackgroundCircles, BottomLine, Gradient } from "../design/Hero";
 import { ScrollParallax } from "react-just-parallax";
-import Notification from "../design/Notification";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/robo_beetle.glb`);
@@ -84,20 +83,13 @@ const Hero = () => {
               </PresentationControls>
             </Canvas>
             <ScrollParallax isAbsolutelyPositioned>
-              <ul className="hidden absolute -right-[5.5rem] top-[11rem] px-1 py-1 bg-linear-3 backdrop-blur border border-n-1/10 rounded-2xl xl:flex ">
+              <ul className="hidden absolute -left-[5.5rem] top-[5.5rem] px-1 py-1 bg-linear-3 backdrop-blur border border-n-1/10 rounded-2xl xl:flex ">
                 {heroIcons.map((icon, index) => (
                   <li key={index} className="p-5 ">
                     <img src={icon} alt="" width={24} height={25} />
                   </li>
                 ))}
               </ul>
-            </ScrollParallax>
-
-            <ScrollParallax isAbsolutelyPositioned>
-              <Notification
-                className="hidden absolute -left-[5.5rem] -top-[8rem] w-[18rem] xl:flex"
-                title="Bug solution accepted"
-              />
             </ScrollParallax>
           </div>
         </div>

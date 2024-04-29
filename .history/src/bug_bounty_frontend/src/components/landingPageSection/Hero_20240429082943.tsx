@@ -7,7 +7,6 @@ import { heroIcons } from "../../constants";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 import { BackgroundCircles, BottomLine, Gradient } from "../design/Hero";
 import { ScrollParallax } from "react-just-parallax";
-import Notification from "../design/Notification";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/robo_beetle.glb`);
@@ -47,7 +46,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="relative  z-10  max-w-[20rem] md:max-w-[30rem] lg:max-w-[40rem] mx-auto text-center md:mb-0 lg:mb-[6rem]">
+        <div className="relative  z-10  max-w-[20rem] lg:max-w-[40rem] mx-auto text-center md:mb-0 lg:mb-[6rem]">
           <h1 className="h3 mb-6 mt-[2rem] text-center">
             Solve and transform{" "}
             <span className="bg-gradient-to-r from-linear-1  to-linear-2  text-[transparent] bg-clip-text">
@@ -84,7 +83,7 @@ const Hero = () => {
               </PresentationControls>
             </Canvas>
             <ScrollParallax isAbsolutelyPositioned>
-              <ul className="hidden absolute -right-[5.5rem] top-[11rem] px-1 py-1 bg-linear-3 backdrop-blur border border-n-1/10 rounded-2xl xl:flex ">
+              <ul className="hidden absolute -left-[5.5rem] top-[5.5rem] px-1 py-1 bg-linear-3 backdrop-blur border border-n-1/10 rounded-2xl xl:flex ">
                 {heroIcons.map((icon, index) => (
                   <li key={index} className="p-5 ">
                     <img src={icon} alt="" width={24} height={25} />
@@ -92,18 +91,11 @@ const Hero = () => {
                 ))}
               </ul>
             </ScrollParallax>
-
-            <ScrollParallax isAbsolutelyPositioned>
-              <Notification
-                className="hidden absolute -left-[5.5rem] -top-[8rem] w-[18rem] xl:flex"
-                title="Bug solution accepted"
-              />
-            </ScrollParallax>
           </div>
         </div>
         <BackgroundCircles parallaxRef={parallaxRef} />
       </div>
-      <div className="justify-center relative mt-[23rem] flex items-center">
+      <div className="justify-center relative flex items-center">
         <Button
           onClick={() => console.log("clicked ")}
           className="z-10 right  font-bold uppercase"
