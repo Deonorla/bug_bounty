@@ -39,7 +39,7 @@ const Features = () => {
                 </div>
               </div>
 
-              {item.light && <GradientLight />}
+              {/* {item.light && <GradientLight />} */}
             </div>
           ))}
         </div>

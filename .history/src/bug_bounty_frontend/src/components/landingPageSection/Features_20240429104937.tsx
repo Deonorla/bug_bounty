@@ -2,14 +2,12 @@ import React from "react";
 import Section from "./Section";
 import Heading from "../design/Heading";
 import { benefits } from "../../constants";
-import Arrow from "../../assets/svg/Arrow";
-import { GradientLight } from "../design/Benefits";
 
 const Features = () => {
   return (
     <Section id="features">
       <div className="container relative z-2">
-        <Heading className="mb-[3rem]" title="Built for " span="Developers" />
+        <Heading title="Built for " span="Developers" />
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <div
@@ -32,14 +30,8 @@ const Features = () => {
                     height={48}
                     alt="item.title"
                   />
-                  <p className="ml-auto font-code text-xs text-n-1 uppercase tracking-wider font-bold ">
-                    Explore more
-                  </p>
-                  <Arrow />
                 </div>
               </div>
-
-              {item.light && <GradientLight />}
             </div>
           ))}
         </div>
