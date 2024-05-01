@@ -32,9 +32,7 @@ const Roadmap = () => (
                 </div>
                 <div className="relative z-1">
                   <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
-                    <Tagline className="text-[.6rem] lg:text-base">
-                      {item.date}
-                    </Tagline>
+                    <Tagline>{item.date}</Tagline>
 
                     <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
                       <img
@@ -57,7 +55,7 @@ const Roadmap = () => (
                       alt={item.title}
                     />
                   </div>
-                  <h4 className="text-[1.2rem] mb-4">{item.title}</h4>
+                  <h4 className="h4 mb-4">{item.title}</h4>
                   <p className="body-2 text-color-7">{item.text}</p>
                 </div>
               </div>

@@ -57,7 +57,7 @@ const Roadmap = () => (
                       alt={item.title}
                     />
                   </div>
-                  <h4 className="text-[1.2rem] mb-4">{item.title}</h4>
+                  <h4 className=" mb-4">{item.title}</h4>
                   <p className="body-2 text-color-7">{item.text}</p>
                 </div>
               </div>
