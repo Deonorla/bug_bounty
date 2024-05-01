@@ -33,6 +33,7 @@ import {
 } from "../assets";
 
 import collaboration from "../assets/collaboration.png";
+import repo from "../assets/repo.png";
 import bounty from "../assets/bounty-system.png";
 import report from "../assets/bug-reporting.png";
 import reward from "../assets/reward.png";
@@ -126,7 +127,7 @@ export const roadmap = [
     text: "Allow users to link their code repositories with BugBounty for easier bug tracking",
     date: "Sept 2024",
     status: "progress",
-    imageUrl: roadmap4,
+    imageUrl: repo,
   },
 ];
 

@@ -10,7 +10,7 @@ import { ScrollParallax } from "react-just-parallax";
 import Notification from "../design/Notification";
 
 const BugModel = (props: any) => {
-  const { scene, animations } = useGLTF(`/robo_beetle.glb`);
+  const { scene, animations } = useGLTF(`/bug.glb`);
   const mixer = useRef<THREE.AnimationMixer | undefined>(undefined);
 
   if (animations && animations.length && !mixer.current) {

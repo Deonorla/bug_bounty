@@ -2,44 +2,18 @@ import React, { useRef } from "react";
 import Section from "./Section";
 import Heading from "../design/Heading";
 import { PresentationControls, Stage, useGLTF } from "@react-three/drei";
-import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import bounty from "../../assets/bounty.jpg";
 import { bugbountyServices, brainwaveServicesIcons } from "../../constants";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import Generating from "../design/Generating";
 
-const BugModel = (props: any) => {
-  const { scene, animations } = useGLTF(`/hack-bug.glb`);
-  const mixer = useRef<THREE.AnimationMixer | undefined>(undefined);
-
-  if (animations && animations.length && !mixer.current) {
-    mixer.current = new THREE.AnimationMixer(scene);
-    animations.forEach((clip) => {
-      mixer.current!.clipAction(clip).play();
-    });
-  }
-
-  useFrame((state, delta) => {
-    if (mixer.current) {
-      mixer.current.update(delta);
-    }
-  });
-  return (
-    <>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 10, 0]} intensity={1} />
-      <primitive object={scene} dispose={null} {...props} />;
-    </>
-  );
-};
-
 const Services = () => {
   return (
     <Section className="py-4" id="how-to-use">
       <div className="flex flex-col">
         <Heading
-          className=" text-center px-8 md:px-0 mb-[3rem]"
+          className=" text-center px-8 md:px-0 mb-[3rem] md:my-[5rem]"
           title="Hack your way"
           span=" into bugs"
         />

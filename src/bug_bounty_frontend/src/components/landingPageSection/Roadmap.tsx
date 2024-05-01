@@ -5,9 +5,9 @@ import { roadmap } from "../../constants";
 import { check2, grid, loading1 } from "../../assets";
 
 const Roadmap = () => (
-  <Section className="overflow-hidden" id="roadmap">
-    <div className="container md:pb-10">
-      <Heading title="Road" span="map" />
+  <Section className="overflow-hidden mb-[2rem]" id="roadmap">
+    <div className="container">
+      <Heading className="mb-[3rem] md:my-[5rem]" title="Road" span="map" />
 
       <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
@@ -48,7 +48,7 @@ const Roadmap = () => (
 
                   <div className=" flex justify-center items-center mb-10 -my-10 -mx-15">
                     <img
-                      className="w-full md:w-[25rem]"
+                      className="w-[20rem] md:w-[25rem]"
                       src={item.imageUrl}
                       width={628}
                       height={426}
@@ -56,7 +56,7 @@ const Roadmap = () => (
                     />
                   </div>
                   <h4 className="h4 mb-4">{item.title}</h4>
-                  <p className="body-2 text-n-4">{item.text}</p>
+                  <p className="body-2 text-color-7">{item.text}</p>
                 </div>
               </div>
             </div>

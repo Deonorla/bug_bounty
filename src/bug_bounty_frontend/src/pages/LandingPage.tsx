@@ -4,15 +4,17 @@ import Hero from "../components/landingPageSection/Hero";
 import Features from "../components/landingPageSection/Features";
 import Services from "../components/landingPageSection/Services";
 import Roadmap from "../components/landingPageSection/Roadmap";
+import Footer from "../components/landingPageSection/Footer";
 
 const LandingPage = () => {
   return (
-    <div className="pt-[4.75rem] lg:pt-[5.25rem]">
+    <div className="pt-[4.75rem] lg:pt-[5.25rem] mb-8">
       <Header />
       <Hero />
       <Features />
       <Services />
       <Roadmap />
+      <Footer />
     </div>
   );
 };

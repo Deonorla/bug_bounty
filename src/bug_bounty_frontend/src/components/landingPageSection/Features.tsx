@@ -9,7 +9,11 @@ const Features = () => {
   return (
     <Section id="features">
       <div className="container relative ">
-        <Heading className="mb-[3rem]" title="Built for " span="Developers" />
+        <Heading
+          className="mb-[3rem] md:mt-[7rem] md:mb-[5rem]"
+          title="Built for "
+          span="Developers"
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {benefits.map((item) => (
             <div
