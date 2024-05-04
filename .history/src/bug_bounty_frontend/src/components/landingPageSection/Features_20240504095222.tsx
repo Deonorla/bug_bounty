@@ -10,7 +10,7 @@ const Features = () => {
     <Section id="features">
       <div className="container relative ">
         <Heading
-          className="mb-[3rem] md:mt-[2rem] lg:mt-[4rem] md:mb-[5rem]"
+          className="mb-[3rem] md:-mt-[2rem] md:mb-[5rem]"
           title="Built for "
           span="Developers"
         />

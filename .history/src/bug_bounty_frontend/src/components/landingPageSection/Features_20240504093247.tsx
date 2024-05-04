@@ -7,10 +7,10 @@ import { GradientLight } from "../design/Benefits";
 
 const Features = () => {
   return (
-    <Section id="features">
+    <Section id="features mt-[5rem]">
       <div className="container relative ">
         <Heading
-          className="mb-[3rem] md:mt-[2rem] lg:mt-[4rem] md:mb-[5rem]"
+          className="mb-[3rem] md:mt-[7rem] md:mb-[5rem]"
           title="Built for "
           span="Developers"
         />

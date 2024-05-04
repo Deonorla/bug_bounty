@@ -61,7 +61,7 @@ const Hero = () => {
           </h1>
         </div>
         {/*  BUG MODEL  */}
-        <div className="relative z-1  max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+        <div className="relative z-1 max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative top-[7rem]  flex justify-center items-center">
             <Canvas
               dpr={[1, 2]}
@@ -102,16 +102,17 @@ const Hero = () => {
           </div>
         </div>
         <BackgroundCircles parallaxRef={parallaxRef} />
-        <div className="justify-center relative mt-[23rem] lg:h-[10rem] flex items-end">
-          <Button
-            onClick={() => console.log("clicked ")}
-            className="z-10 right  font-bold uppercase"
-            href="/pricing"
-          >
-            Get started
-          </Button>
-        </div>
       </div>
+      {/* <div className="justify-center relative mt-[23rem] flex items-center">
+        <Button
+          onClick={() => console.log("clicked ")}
+          className="z-10 right  font-bold uppercase"
+          href="/pricing"
+          // white
+        >
+          Get started
+        </Button>
+      </div> */}
     </Section>
   );
 };

@@ -65,7 +65,7 @@ const Footer = () => {
           title="Become a bounty"
           span=" hunter today"
         />
-        <div className="  md:mt-[2rem] flex items-center">
+        <div className=" mt-4 md:mt-[2rem] flex items-center">
           <Button
             onClick={() => console.log("clicked ")}
             className="z-10 right  font-bold uppercase"

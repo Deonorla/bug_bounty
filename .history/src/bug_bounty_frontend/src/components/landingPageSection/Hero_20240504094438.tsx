@@ -46,7 +46,7 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div className="container relative" ref={parallaxRef}>
+      <div className="container h-screen relative" ref={parallaxRef}>
         <div className="relative  z-10  max-w-[20rem] md:max-w-[30rem] lg:max-w-[40rem] mx-auto text-center md:mb-0 lg:mb-[6rem]">
           <h1 className="h3 mb-6 mt-[2rem] text-center">
             Solve and transform{" "}
@@ -102,15 +102,16 @@ const Hero = () => {
           </div>
         </div>
         <BackgroundCircles parallaxRef={parallaxRef} />
-        <div className="justify-center relative mt-[23rem] lg:h-[10rem] flex items-end">
-          <Button
-            onClick={() => console.log("clicked ")}
-            className="z-10 right  font-bold uppercase"
-            href="/pricing"
-          >
-            Get started
-          </Button>
-        </div>
+      </div>
+      <div className="justify-center relative  flex items-center">
+        <Button
+          onClick={() => console.log("clicked ")}
+          className="z-10 right  font-bold uppercase"
+          href="/pricing"
+          // white
+        >
+          Get started
+        </Button>
       </div>
     </Section>
   );

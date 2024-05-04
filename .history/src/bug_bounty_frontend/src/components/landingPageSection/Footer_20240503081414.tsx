@@ -37,7 +37,7 @@ const BugModel = (props: any) => {
 
 const Footer = () => {
   return (
-    <div className="relative">
+    <div className="">
       <div className=" relative flex justify-center items-center -mt-[15rem] md:-mt-[4rem] lg:mt-[3rem]">
         <Canvas
           dpr={[1, 2]}
@@ -46,6 +46,8 @@ const Footer = () => {
           style={{
             width: `100%`,
             height: `50rem`,
+            position: "absolute",
+            top: "0",
           }}
         >
           <PresentationControls
@@ -59,13 +61,13 @@ const Footer = () => {
           </PresentationControls>
         </Canvas>
       </div>
-      <div className="relative flex justify-center flex-col items-center -mt-[12rem] md:mt-[5rem]">
+      <div className="flex justify-center flex-col items-center mt-[37rem] md:mt-[51rem] lg:mt-[51rem]">
         <Heading
           className="text-center max-w-[25rem] px-8 md:px-0"
           title="Become a bounty"
           span=" hunter today"
         />
-        <div className="  md:mt-[2rem] flex items-center">
+        <div className=" mt-[2rem] flex items-center">
           <Button
             onClick={() => console.log("clicked ")}
             className="z-10 right  font-bold uppercase"

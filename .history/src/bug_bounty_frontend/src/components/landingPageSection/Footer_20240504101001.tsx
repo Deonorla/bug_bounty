@@ -59,13 +59,13 @@ const Footer = () => {
           </PresentationControls>
         </Canvas>
       </div>
-      <div className="relative flex justify-center flex-col items-center -mt-[12rem] md:mt-[5rem]">
+      <div className="relative flex justify-center flex-col items-center -mt-[9rem] md:mt-[5rem]">
         <Heading
           className="text-center max-w-[25rem] px-8 md:px-0"
           title="Become a bounty"
           span=" hunter today"
         />
-        <div className="  md:mt-[2rem] flex items-center">
+        <div className=" mt-[2rem] flex items-center">
           <Button
             onClick={() => console.log("clicked ")}
             className="z-10 right  font-bold uppercase"

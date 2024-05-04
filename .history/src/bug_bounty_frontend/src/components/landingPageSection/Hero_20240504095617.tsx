@@ -102,7 +102,7 @@ const Hero = () => {
           </div>
         </div>
         <BackgroundCircles parallaxRef={parallaxRef} />
-        <div className="justify-center relative mt-[23rem] lg:h-[10rem] flex items-end">
+        <div className="justify-center relative mt-[23rem]  flex items-end">
           <Button
             onClick={() => console.log("clicked ")}
             className="z-10 right  font-bold uppercase"
