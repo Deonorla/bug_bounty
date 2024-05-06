@@ -62,7 +62,7 @@ pub struct UserProfile {
     pub age: u8,
     pub date: String,
     pub status: Status,
-    pub wins: u8,
+    pub bounties_wons: u8,
     pub bountys_created:u8,
     pub points: Option<u128>,
     pub username: String,
@@ -109,10 +109,9 @@ pub struct BountyAccount {
     pub starting_date: String,
     pub bounty_rules: String,
     pub bounty_type: BountyType,
-    pub game: String,
+    pub milestone: String,
     pub guild:Vec<Guild>,
     pub guild_points: Option<Vec<(String,u128)>>,
-    pub guild_in_game_names:Option<Vec<(String, String)>>,
     pub messages: Option<Vec<Chat>>,
     pub user: Vec<String>,
     pub winers: Vec<String>,
@@ -120,10 +119,9 @@ pub struct BountyAccount {
     pub total_prize: u128,
     pub no_of_winners: u8,
     pub no_of_participants: u128,
-    pub game_type: GameType,
+    pub milestone_type: MilestonesType,
     pub end_date: String,
     pub title: String,
-    pub in_game_names: Option<Vec<(String,String)>>,
     pub points: Option<Vec<(String,u128)>>,
     pub milestones: Option<Vec<MilestonesAccount>>
 }
@@ -136,14 +134,14 @@ pub struct MilestonesAccount {
     pub starting_date: Option<String>,
     pub milestone_rules: String,
     pub bounty_type: BountyType,
-    pub game: String,
+    pub milestone: String,
     pub guilds:Vec<Guild>,
     pub messages: Option<Vec<Chat>>,
     pub participants: Vec<String>,
     pub winers: Vec<String>,
     pub no_of_winners: Option<u8>,
     pub no_of_participants: u128,
-    pub game_type: GameType,
+    pub milestone_type: MilestonesType,
     pub name: Option<String>,
 }
 
@@ -176,7 +174,7 @@ pub enum Status {
 }
 
 #[derive(Clone, Debug, Default, CandidType, Deserialize, Serialize)]
-pub enum GameType {
+pub enum MilestonesType {
     #[default]
     TeamvTeam,
     Single,
@@ -196,8 +194,8 @@ pub enum BountyStatus {
 pub enum MilestonesStatus {
     #[default]
     readyToStart,
-    GameInProgress,
-    GameCompleted,
+    MilestonesInProgress,
+    MilestonesCompleted,
 }
 
 #[derive(Clone, Debug, Default, CandidType, Deserialize, Serialize)]
