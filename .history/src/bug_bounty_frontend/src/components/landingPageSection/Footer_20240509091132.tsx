@@ -11,6 +11,7 @@ import Heading from "../design/Heading";
 import Button from "../utils/Button";
 import { socials } from "../../constants";
 import { BackgroundBeams } from "../ui/background-beams";
+import { Meteors } from "../ui/meteors";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/hunter2.glb`);
@@ -97,7 +98,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <BackgroundBeams />
+      <Meteors number={50} />
     </div>
   );
 };

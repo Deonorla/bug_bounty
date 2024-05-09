@@ -45,7 +45,7 @@ const Features = () => {
                   <Arrow />
                 </div>
               </div>
-              <Meteors className="overflow-hidden" number={20} />
+              <Meteors className="" number={20} />
 
               {/* {item.light && <GradientLight />} */}
             </div>

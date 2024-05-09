@@ -10,7 +10,6 @@ import * as THREE from "three";
 import Heading from "../design/Heading";
 import Button from "../utils/Button";
 import { socials } from "../../constants";
-import { BackgroundBeams } from "../ui/background-beams";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/hunter2.glb`);
@@ -48,7 +47,6 @@ const Footer = () => {
           style={{
             width: `100%`,
             height: `50rem`,
-            zIndex: "1",
           }}
         >
           <PresentationControls
@@ -80,24 +78,18 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer */}
-      <div className="mt-[5rem] items-center flex sm:justify-between p-4 justify-center gap-10 max-sm:flex-col ">
+      <div className="mt-[5rem] flex sm:justify-between justify-center gap-10 max-sm:flex-col ">
         <p className="caption text-color-7 lg:block">
           ©{new Date().getFullYear()}. All rights reserved.
         </p>
         <ul className="flex gap-5 flex-wrap">
           {socials.map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              className="flex items-center w-10 h-10 bg-n-7 justify-center rounded-full transition-colors hover:bg-n-6 "
-            >
-              <img src={item.iconUrl} width={16} height={16} alt={item.title} />
+            <a href="">
+              <img src={item.iconUrl} alt="" />
             </a>
           ))}
         </ul>
       </div>
-      <BackgroundBeams />
     </div>
   );
 };

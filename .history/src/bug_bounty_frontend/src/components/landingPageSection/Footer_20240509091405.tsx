@@ -11,6 +11,7 @@ import Heading from "../design/Heading";
 import Button from "../utils/Button";
 import { socials } from "../../constants";
 import { BackgroundBeams } from "../ui/background-beams";
+import { Meteors } from "../ui/meteors";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/hunter2.glb`);
@@ -40,6 +41,7 @@ const BugModel = (props: any) => {
 const Footer = () => {
   return (
     <div className="relative">
+      <Meteors number={50} className=" overflow-hidden right-0 " />
       <div className=" relative flex justify-center items-center -mt-[15rem] md:-mt-[4rem] lg:mt-[3rem]">
         <Canvas
           dpr={[1, 2]}
@@ -97,7 +99,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <BackgroundBeams />
+      <Meteors number={50} className=" overflow-hidden" />
     </div>
   );
 };

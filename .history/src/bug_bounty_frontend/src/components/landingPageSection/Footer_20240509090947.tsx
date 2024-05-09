@@ -97,7 +97,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <BackgroundBeams />
+      <BackgroundBeams className="w-fit" />
     </div>
   );
 };

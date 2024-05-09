@@ -48,7 +48,7 @@ const Footer = () => {
           style={{
             width: `100%`,
             height: `50rem`,
-            zIndex: "1",
+            zIndex: "50",
           }}
         >
           <PresentationControls

@@ -15,7 +15,7 @@ const Features = () => {
           title="Built for "
           span="Developers"
         />
-        <div className="grid relative  overflow-hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {benefits.map((item) => (
             <div
               className="block z-0 relative p-0.5 bg-no-repeat 
@@ -29,7 +29,7 @@ const Features = () => {
               <div className="relative  flex flex-col min-h-[22rem] p-[2.4rem] ">
                 <h5 className="text-[1.2rem] mb-5">{item.title}</h5>
                 <p className="text-[.85rem] mb-6 text-color-7">{item.text}</p>
-                <div className="flex  items-center mt-auto">
+                <div className="flex relative items-center mt-auto">
                   <img
                     src={item.iconUrl}
                     width={48}
@@ -43,9 +43,9 @@ const Features = () => {
                     Explore more
                   </p>
                   <Arrow />
+                  <Meteors className="overflow-hidden" number={20} />
                 </div>
               </div>
-              <Meteors className="overflow-hidden" number={20} />
 
               {/* {item.light && <GradientLight />} */}
             </div>

@@ -8,6 +8,7 @@ import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 import { BackgroundCircles, BottomLine, Gradient } from "../design/Hero";
 import { ScrollParallax } from "react-just-parallax";
 import Notification from "../design/Notification";
+import { TypewriterEffectSmooth } from "../ui/typewriterEffect";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/bug.glb`);
@@ -48,7 +49,7 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative  z-10  max-w-[20rem] md:max-w-[30rem] lg:max-w-[40rem] mx-auto text-center md:mb-0 lg:mb-[6rem]">
-          <h1 className=" h3 md:h2 mb-6 mt-[2rem] text-center">
+          <h1 className="h3 mb-6 mt-[2rem] text-center">
             Solve and transform{" "}
             <span className="bg-gradient-to-r from-linear-1  to-linear-2  text-[transparent] bg-clip-text">
               {" "}

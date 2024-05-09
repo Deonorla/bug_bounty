@@ -15,7 +15,7 @@ const Features = () => {
           title="Built for "
           span="Developers"
         />
-        <div className="grid relative  overflow-hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
+        <div className="grid relative w-fit grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {benefits.map((item) => (
             <div
               className="block z-0 relative p-0.5 bg-no-repeat 

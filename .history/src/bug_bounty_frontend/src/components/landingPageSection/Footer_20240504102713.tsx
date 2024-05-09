@@ -10,7 +10,6 @@ import * as THREE from "three";
 import Heading from "../design/Heading";
 import Button from "../utils/Button";
 import { socials } from "../../constants";
-import { BackgroundBeams } from "../ui/background-beams";
 
 const BugModel = (props: any) => {
   const { scene, animations } = useGLTF(`/hunter2.glb`);
@@ -48,7 +47,6 @@ const Footer = () => {
           style={{
             width: `100%`,
             height: `50rem`,
-            zIndex: "1",
           }}
         >
           <PresentationControls
@@ -97,7 +95,6 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <BackgroundBeams />
     </div>
   );
 };
