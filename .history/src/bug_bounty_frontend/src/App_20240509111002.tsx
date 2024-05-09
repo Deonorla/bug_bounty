@@ -1,12 +1,13 @@
 import { useState } from "react";
 import React from "react";
 import LandingPage from "./pages/LandingPage";
-
+import ButtonGradient from "./assets/svg/ButtonGradient";
 import Dashboard from "./pages/Dashboard";
 import { Route, Routes } from "react-router-dom";
-import Sidebar from "./components/common/sidebar";
 
 function App() {
+  const [greeting, setGreeting] = useState("");
+
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />

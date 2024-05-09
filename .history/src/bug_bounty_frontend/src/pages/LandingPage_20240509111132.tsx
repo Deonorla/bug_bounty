@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
-import Hero from "../components/landingpage/Hero";
-import Features from "../components/landingpage/Features";
-import Services from "../components/landingpage/Services";
-import Roadmap from "../components/landingpage/Roadmap";
-import Footer from "../components/landingpage/Footer";
+import Hero from "../components/landingPageSection/Hero";
+import Features from "../components/landingPageSection/Features";
+import Services from "../components/landingPageSection/Services";
+import Roadmap from "../components/landingPageSection/Roadmap";
+import Footer from "../components/landingPageSection/Footer";
 import ButtonGradient from "../assets/svg/ButtonGradient";
 const LandingPage = () => {
   return (

@@ -8,10 +8,17 @@ import Sidebar from "./components/common/sidebar";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+      <div className="">
+        <Sidebar />
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 
