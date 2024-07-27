@@ -11,7 +11,7 @@ const SignUp = () => {
           alt="bounty "
         />
       </div>
-      <div className="absolute  m-auto flex  flex-col inset-0 w-[90%] md:w-[70%] lg:w-[50%]  p-4 z-1  h-[39rem] mb-5  border border-n-1/10 rounded-3xl  xl:h-[46rem]">
+      <div className="absolute  m-auto flex justify-center items-center flex-col inset-0 w-[90%] md:w-[70%] lg:w-[50%]  p-4 z-1  h-[39rem] mb-5  border border-n-1/10 rounded-3xl  xl:h-[46rem]">
         <h1 className={` text-[1.5rem] mb-6  text-center mt-32`}>
           {" "}
           Login to
@@ -40,14 +40,6 @@ const SignUp = () => {
               Sign in with NFID
             </p>
           </button>
-          <div className="mt-8">
-            <p className="text-[.7rem] lg:text-[.82rem] text-center text-color-7 my-[.2rem]">
-              Do not have an account ?{"    "}
-              <span className="bg-gradient-to-r from-linear-1  to-linear-2  text-[transparent] bg-clip-text hover:underline cursor-pointer lg:text-[.82rem] text-[.7rem]">
-                Sign Up
-              </span>
-            </p>
-          </div>
         </div>
       </div>
     </div>

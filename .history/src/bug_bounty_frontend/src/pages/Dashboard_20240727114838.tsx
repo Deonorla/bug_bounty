@@ -1,14 +1,16 @@
 import React from "react";
 import Sidebar from "../components/common/Sidebar";
 import Header from "../components/common/Header";
-import Bounties from "./Bounties";
 
 const Dashboard = () => {
   return (
-    <div className="flex ">
+    <div className="">
       <Header />
       <Sidebar />
-      <Bounties />
+
+      <div className="mt-24 ">
+        <h2 className="text-white text-xl">Bounties</h2>
+      </div>
     </div>
   );
 };

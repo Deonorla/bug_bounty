@@ -13,15 +13,15 @@ const Sidebar = () => {
 
   const menus = [
     // { name: "Home", link: "", icon: IoHomeSharp },
-    {
-      name: "Bounties",
-      link: "",
-      icon: IoBug,
-      subMenu: [
-        //   { name: "Prepaid", link: "/prepaid-tournament" },
-        //   { name: "CrowdFunded", link: "/active-tournament" },
-      ],
-    },
+    // {
+    //   name: "Bounties",
+    //   link: "",
+    //   icon: IoBug,
+    //   subMenu: [
+    //     //   { name: "Prepaid", link: "/prepaid-tournament" },
+    //     //   { name: "CrowdFunded", link: "/active-tournament" },
+    //   ],
+    // },
     {
       name: "Teams",
       link: "",
@@ -31,9 +31,9 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={` hidden lg:top-16 mt-[4rem] lg:h-[calc(100vh-theme(space.16))] lg:flex flex-col  ${
+      className={` hidden lg:top-16 lg:h-[calc(100vh-theme(space.16))] lg:flex flex-col  ${
         open ? "w-60" : "w-[4.5rem]"
-      } left-0 border-y-[transparent] border-l-[transparent] sticky border-r-white/10 border border-solid transition-[width,transform] duration-300 ease-in-out   top-0 h-full `}
+      } left-0 border-y-[transparent] border-l-[transparent]  border-r-white/10 border border-solid transition-[width,transform] duration-300 ease-in-out  fixed top-0 h-full `}
     >
       <div className="py-3 flex justify-end ">
         <HiMenuAlt3

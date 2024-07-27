@@ -5,11 +5,11 @@ import Bounties from "./Bounties";
 
 const Dashboard = () => {
   return (
-    <div className="flex ">
+    <div className="">
       <Header />
       <Sidebar />
-      <Bounties />
-    </div>
+
+     <Bounties />
   );
 };
 

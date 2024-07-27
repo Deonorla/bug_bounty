@@ -31,7 +31,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={` hidden lg:top-16 mt-[4rem] lg:h-[calc(100vh-theme(space.16))] lg:flex flex-col  ${
+      className={` hidden lg:top-16 mt-[15rem] lg:h-[calc(100vh-theme(space.16))] lg:flex flex-col  ${
         open ? "w-60" : "w-[4.5rem]"
       } left-0 border-y-[transparent] border-l-[transparent] sticky border-r-white/10 border border-solid transition-[width,transform] duration-300 ease-in-out   top-0 h-full `}
     >

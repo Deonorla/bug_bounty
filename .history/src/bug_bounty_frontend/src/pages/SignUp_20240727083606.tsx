@@ -40,14 +40,6 @@ const SignUp = () => {
               Sign in with NFID
             </p>
           </button>
-          <div className="mt-8">
-            <p className="text-[.7rem] lg:text-[.82rem] text-center text-color-7 my-[.2rem]">
-              Do not have an account ?{"    "}
-              <span className="bg-gradient-to-r from-linear-1  to-linear-2  text-[transparent] bg-clip-text hover:underline cursor-pointer lg:text-[.82rem] text-[.7rem]">
-                Sign Up
-              </span>
-            </p>
-          </div>
         </div>
       </div>
     </div>
